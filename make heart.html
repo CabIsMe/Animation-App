@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a heart</title>
+</head>
+<body>
+    <img id="img" src="images/1.png" alt="">
+    <div class="borderImg">
+        <div class="leftBorder"></div>
+        <div class="rightBorder"></div>
+        <div class="topBorder"></div>
+        <div class="botBorder"></div>
+    </div>
+</body>
+<style>
+    body{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background: #333;
+    }   
+    img{
+        z-index: 2;
+        position: absolute;
+        width: 600px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) ;
+        transition: ease-in-out;
+    }
+    .borderImg{
+        z-index: 1;
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) ; 
+        background: transparent;
+        animation: control5 step-start 1s infinite;
+    }
+    .leftBorder {
+        z-index: 1;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 0%;
+        background: url(images/1.png);
+        background-size: contain;
+        animation: control3 step-end 0.8s infinite;
+    }
+    .rightBorder {
+        z-index: 1;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        right: 0%;
+        background: url(images/1.png);
+        background-size: contain;
+        animation: control4 step-end 0.8s infinite;
+    }
+    .topBorder {
+        z-index: 1;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 0%;
+        left: 50%;     
+        background: url(images/1.png);
+        background-size: contain;
+        animation: control2 step-end 0.8s infinite;
+    }
+    .botBorder {
+        z-index: 1;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0) ;
+        background: url(images/1.png);
+        background-size: contain;
+        animation: control1 step-end 0.8s infinite;
+    }
+    @keyframes control1{
+        0%{
+            bottom: 0;
+            ;
+        }
+        10%{
+            bottom: 5%;
+            transform: scale(1.2)
+        }
+        20%{
+            bottom: 10%;
+            transform: scale(1.4)
+        }
+        30%{
+            bottom: 15%;
+            transform: scale(1.6)
+        }
+        40%{
+            bottom: 20%;
+            transform: scale(1.8)
+        }
+        50%{
+            bottom: 25%;
+            transform: scale(2)
+        }
+        60%{
+            bottom: 30%;
+            transform: scale(2.2)
+        }
+        70%{
+            bottom: 35%;
+            transform: scale(2.4)
+        }
+        80%{
+            bottom: 40%;
+            transform: scale(2.7)
+        }
+        90%{
+            bottom: 45%;
+            transform: scale(3)
+        }
+        100%{
+            bottom: 0;
+        }
+    }
+    @keyframes control2{
+        0%{
+            top: 0;
+            ;
+        }
+        10%{
+            top: 5%;
+            transform: scale(1.2)
+        }
+        20%{
+            top: 10%;
+            transform: scale(1.4)
+        }
+        30%{
+            top: 15%;
+            transform: scale(1.6)
+        }
+        40%{
+            top: 20%;
+            transform: scale(1.8)
+        }
+        50%{
+            top: 25%;
+            transform: scale(2)
+        }
+        60%{
+            top: 30%;
+            transform: scale(2.2)
+        }
+        70%{
+            top: 35%;
+            transform: scale(2.4)
+        }
+        80%{
+            top: 40%;
+            transform: scale(2.7)
+        }
+        90%{
+            top: 45%;
+            transform: scale(3)
+        }
+        100%{
+            top: 0;
+        }
+    }
+    @keyframes control3{
+        0%{
+            left: 0;
+            ;
+        }
+        10%{
+            left: 5%;
+            transform: scale(1.2)
+        }
+        20%{
+            left: 10%;
+            transform: scale(1.4)
+        }
+        30%{
+            left: 15%;
+            transform: scale(1.6)
+        }
+        40%{
+            left: 20%;
+            transform: scale(1.8)
+        }
+        50%{
+            left: 25%;
+            transform: scale(2)
+        }
+        60%{
+            left: 30%;
+            transform: scale(2.2)
+        }
+        70%{
+            left: 35%;
+            transform: scale(2.4)
+        }
+        80%{
+            left: 40%;
+            transform: scale(2.7)
+        }
+        90%{
+            left: 45%;
+            transform: scale(3)
+        }
+        100%{
+            left: 0;
+        }
+    }
+    @keyframes control4{
+        0%{
+            right: 0;
+            ;
+        }
+        10%{
+            right: 5%;
+            transform: scale(1.2)
+        }
+        20%{
+            right: 10%;
+            transform: scale(1.4)
+        }
+        30%{
+            right: 15%;
+            transform: scale(1.6)
+        }
+        40%{
+            right: 20%;
+            transform: scale(1.8)
+        }
+        50%{
+            right: 25%;
+            transform: scale(2)
+        }
+        60%{
+            right: 30%;
+            transform: scale(2.2)
+        }
+        70%{
+            right: 35%;
+            transform: scale(2.4)
+        }
+        80%{
+            right: 40%;
+            transform: scale(2.7)
+        }
+        90%{
+            right: 45%;
+            transform: scale(3)
+        }
+        100%{
+            right: 0;
+        }
+    }
+    @keyframes control5{
+        0%{
+           transform: translate(-50%, -50%) rotate(0deg);
+        }
+        
+        20%{
+            transform: translate(-50%, -50%) rotate(72deg);
+        }
+        
+        40%{
+            transform: translate(-50%, -50%) rotate(144deg);
+        }
+        
+        60%{
+            transform: translate(-50%, -50%) rotate(216deg);
+        }
+        
+        80%{
+            transform: translate(-50%, -50%) rotate(288deg);
+        }
+        
+        100%{
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+</style>
+<script>
+
+
+    const img=document.getElementById('img')
+    let i=0
+
+    const changeImg= setInterval(()=>{
+        
+        i++
+        img.src='images/'+i+'.png'
+        if(i==7){
+            
+            img.style.transform='translate(-50%, -50%) scale(0.8)'
+        }
+        if(i==8){
+            
+            img.style.transform='translate(-50%, -50%) scale(0.6)'
+        }
+        if(i==9){
+            
+            img.style.transform='translate(-50%, -50%) scale(0.2)'
+        }
+        if(i>9){
+            img.style.transform='translate(-50%, -50%)'
+            i=0
+        }
+        
+
+
+    }, 200)
+</script>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+</head>
+<body>
+    <div class="img_background">
+        <img src="img_hpbd.jpg" alt="">
+    </div>
+    <div class="time_hpbd">
+        <div class="date_hpbd">
+
+        </div>
+        <div class="hours_hpbd">
+
+        </div>
+        <div class="minutes_hpbd">
+
+        </div>
+        <div class="seconds_hpbd">
+
+        </div>
+    </div>
+    <div class="gif_hpbd">    
+        <img src="8532e86b35daa09a4fe9e88f15feca49.gif" alt="">
+        <h3>CHÚC MỪNG SINH NHẬT BÉ YÊU CỦA ANH</h3>
+    </div>
+</body>
+<style>
+    body{
+        background-color: #775554;
+        position: relative;
+    }
+    .img_background{
+        width: 100vw;
+        height: 725px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img_background img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .gif_hpbd{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .gif_hpbd h3{
+        color: crimson;
+        position: absolute;
+        bottom: 10%;
+        background: #fff;
+        padding: 3px;
+    }
+    .gif_hpbd img{
+        object-fit: contain;
+        transform: scale(1.3);
+    }
+    .time_hpbd{
+        font-size: 30px;
+        position: absolute;
+        right: 6%;
+        bottom: 28%;
+        display: flex;
+    }
+    .time_hpbd div{
+        margin-right: 10px;
+        background: rgba(223,224,216, 0.4);
+        padding: 10px ;
+        border-radius: 2px;
+    }
+}
+</style>
+<script>
+    
+      //document.querySelector('.time_hpbd').innerHTML=
+
+
+    
+
+    // Creates interval
+    const zeroFill = n => {
+        return ('0' + n).slice(-2);
+    }
+
+    // Creates interval
+    const interval = setInterval(() => {
+        // Get current time
+        const now = new Date();
+
+        // Format date as in mm/dd/aaaa hh:ii:ss
+        const dateTime = zeroFill((now.getUTCDate() + 1)) + '/' + zeroFill(now.getMonth()) + '/' + now.getFullYear() + ' ' + 
+        zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+        // Display the date and time on the screen using div#date-time
+        
+        document.querySelector('.date_hpbd').innerHTML= zeroFill((now.getUTCDate()+1 )) + '/' + zeroFill(now.getMonth()+1) + '/' + now.getFullYear()
+        document.querySelector('.hours_hpbd').innerHTML= zeroFill(now.getHours())
+        document.querySelector('.minutes_hpbd').innerHTML= zeroFill(now.getMinutes())
+        document.querySelector('.seconds_hpbd').innerHTML= zeroFill(now.getSeconds())
+        if(now.getMinutes()==0) {
+            <!-- document.querySelector('.gif_hpbd').style.display='flex' -->
+        }
+    }, 1000);
+</script>
+</html>
